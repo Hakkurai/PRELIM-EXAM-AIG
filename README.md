@@ -1,0 +1,2 @@
+# PRELIM-EXAM-AIG
+AI Detection
