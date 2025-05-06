@@ -57,7 +57,7 @@ public class SimpleAIFollow : MonoBehaviour
                 {
                     Vector3 knockbackDir = (player.position - transform.position).normalized;
                     knockbackDir.y = 0; // Prevent vertical launch
-                    playerRb.AddForce(knockbackDir * 5f, ForceMode.Impulse); // Adjust force as needed
+                    playerRb.AddForce(knockbackDir * 10f, ForceMode.Impulse); // Adjust force as needed
                 }
             }
         }
