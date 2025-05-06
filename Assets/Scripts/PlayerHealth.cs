@@ -17,15 +17,17 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int amount)
-    {
-        currentLives -= amount;
-        UpdateUI();
+{
+    currentLives -= amount;
+    Debug.Log("Player took damage. Lives left: " + currentLives);
+    UpdateUI();
 
-        if (currentLives <= 0)
-        {
-            SceneManager.LoadScene(gameOverSceneName);
-        }
+    if (currentLives <= 0)
+    {
+        SceneManager.LoadScene(gameOverSceneName);
     }
+}
+
 
     void UpdateUI()
     {

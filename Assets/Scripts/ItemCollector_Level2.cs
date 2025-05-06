@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class ItemCollector : MonoBehaviour
+public class ItemCollector_Level2 : MonoBehaviour
 {
     private bool isNearCube = false;
     private GameObject targetCube;
@@ -21,12 +21,10 @@ public class ItemCollector : MonoBehaviour
         {
             // Collect the cube
             Destroy(targetCube);
+            popupText.gameObject.SetActive(false);
 
-            if (popupText != null)
-                popupText.gameObject.SetActive(false);
-
-            // Load next scene
-            SceneManager.LoadScene("Level_2");
+            // Load win scene
+            SceneManager.LoadScene("WinScene");
         }
     }
 
