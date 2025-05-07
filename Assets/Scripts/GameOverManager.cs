@@ -3,11 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
+    public static string previousSceneName;
+
     public void RetryLevel()
     {
-        // Reload the current level
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
+         SceneManager.LoadScene(previousSceneName);
+        
+
     }
 
     public void LoadMainMenu()

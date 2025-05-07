@@ -24,13 +24,17 @@ public class PlayerHealth : MonoBehaviour
 
     if (currentLives <= 0)
     {
-        SceneManager.LoadScene(gameOverSceneName);
+        // SceneManager.LoadScene(gameOverSceneName);
+        GameOverManager.previousSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("GameOver");
+
+        
     }
 }
 
 
     void UpdateUI()
     {
-        livesText.text = "Lives: " + currentLives;
+        livesText.text = "Health: " + currentLives;
     }
 }
